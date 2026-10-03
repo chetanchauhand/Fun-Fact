@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec, #e3e0ff, #d9f5ef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #292647;
+}
+
+.quiz-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 15px 40px #77777725;
+    animation: appear 0.4s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 12px;
+    border: 1px solid #e5e0f5;
+    border-radius: 12px;
+    background: #f8f6ff;
+    color: #292647;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: #e9e4ff;
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    background: #7565d8;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #5e4fc1;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.option-btn {
+    text-align: left;
+}
+
+.option-btn.selected {
+    background: #e6e0ff;
+    border: 2px solid #7565d8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #7565d8;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.progress-track {
+    height: 8px;
+    background: #eeeaf9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 10%;
+    background: #7565d8;
+    transition: width 0.3s;
+}
+
+.feedback {
+    min-height: 25px;
+    margin: 18px 0;
+    color: #7565d8;
+    font-weight: bold;
+}
+
+.score-circle {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.score-circle strong {
+    display: block;
+    font-size: 40px;
+    color: #7565d8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confetti-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -15px;
+    width: 8px;
+    height: 12px;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-card {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}

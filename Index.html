@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th PCM Friendship Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="quiz-card">
+
+        <section id="welcome-screen">
+            <h1>How Well Do You Know Your PCM Life?</h1>
+
+            <p>
+                Numericals, reactions aur last-minute padhai.
+                Let's test your PCM memories!
+            </p>
+
+            <button id="start-btn" class="primary-btn">
+                Start Quiz
+            </button>
+        </section>
+
+        <section id="quiz-screen" class="hidden">
+
+            <div class="quiz-meta">
+                <span id="question-count">Question 1 of 10</span>
+                <span id="score-label">Score: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+
+            <h2 id="question-text"></h2>
+
+            <div id="options"></div>
+
+            <p id="feedback" class="feedback">
+                Choose your answer!
+            </p>
+
+            <button id="next-btn" class="primary-btn" disabled>
+                Next
+            </button>
+
+        </section>
+
+        <section id="result-screen" class="hidden">
+
+            <h2 id="result-title"></h2>
+
+            <p id="result-message"></p>
+
+            <div class="score-circle">
+                <strong id="final-score">0/10</strong>
+                <span>Questions Answered</span>
+            </div>
+
+            <button id="play-again-btn" class="primary-btn">
+                Play Again
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Made for the legends who survived PCM
+    </footer>
+
+    <div id="confetti-layer" class="confetti-layer"></div>
+
+</body>
+</html>
